@@ -83,8 +83,8 @@ public class MovieRecycleViewAdapter extends RecyclerView.Adapter<MovieRecycleVi
         public MoviesViewHolder(View itemView) {
             super(itemView);
 
-            moviePosterIv = (ImageView) itemView.findViewById(R.id.moviePoster);
-            movieTitleTv = (TextView) itemView.findViewById(R.id.movieTitle);
+            moviePosterIv = itemView.findViewById(R.id.moviePoster);
+            movieTitleTv = itemView.findViewById(R.id.movieTitle);
             itemView.setOnClickListener(this);
         }
 

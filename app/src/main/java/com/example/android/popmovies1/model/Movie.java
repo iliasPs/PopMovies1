@@ -17,11 +17,11 @@ public class Movie implements Parcelable {
             return new Movie[size];
         }
     };
-    private String mTitle;
-    private String mReleaseDate;
-    private String mMoviePoster;
-    private String mAvgVote;
-    private String mPlot;
+    private final String mTitle;
+    private final String mReleaseDate;
+    private final String mMoviePoster;
+    private final String mAvgVote;
+    private final String mPlot;
 
     public Movie(String title, String releaseDate, String moviePoster, String avgVote, String plot) {
 

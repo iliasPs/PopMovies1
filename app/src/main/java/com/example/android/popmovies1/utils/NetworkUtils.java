@@ -13,9 +13,9 @@ import java.net.URL;
 
 public class NetworkUtils {
 
-    final static String POPULAR_URL = "http://api.themoviedb.org/3/movie/popular?";
-    final static String MOST_RATED_URL = "http://api.themoviedb.org/3/movie/top_rated?";
-    final static String API_KEY = BuildConfig.ApiKey;
+    final static private String POPULAR_URL = "http://api.themoviedb.org/3/movie/popular?";
+    final static private String MOST_RATED_URL = "http://api.themoviedb.org/3/movie/top_rated?";
+    final static private String API_KEY = BuildConfig.ApiKey;
 
     /**
      * Tag for the log messages

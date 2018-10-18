@@ -23,7 +23,7 @@ public class JsonUtils {
 
     private final static String IMAGE_BASE_URL = "http://image.tmdb.org/t/p/";
     private final static String IMAGE_SIZE_POSTER = "w500";
-    private static String currentImagePath;
+    private static String mCurrentImagePath;
 
 
     public static ArrayList<Movie> extractFeatureFromJson(String movieJson) {
@@ -41,13 +41,13 @@ public class JsonUtils {
                String currentTitle = currentMovie.getString("original_title");
                 String currentReleaseDate = currentMovie.getString("release_date");
                 if (currentMovie.getString("poster_path") != null ){
-                  currentImagePath = IMAGE_BASE_URL+ IMAGE_SIZE_POSTER + currentMovie.getString("poster_path");
+                  mCurrentImagePath = IMAGE_BASE_URL+ IMAGE_SIZE_POSTER + currentMovie.getString("poster_path");
                 }else {
-                    currentImagePath = null;
+                    mCurrentImagePath = null;
                 }
                 String currentAvg = currentMovie.getString("vote_average");
                 String currentPlot = currentMovie.getString("overview");
-                movies.add(new Movie(currentTitle, currentReleaseDate, currentImagePath, currentAvg, currentPlot));
+                movies.add(new Movie(currentTitle, currentReleaseDate, mCurrentImagePath, currentAvg, currentPlot));
             }
 
         } catch (JSONException e) {

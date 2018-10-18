@@ -1,11 +1,11 @@
 package com.example.android.popmovies1;
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.example.android.popmovies1.model.Movie;
 import com.squareup.picasso.Picasso;
@@ -25,19 +25,20 @@ public class MovieDetailActivity extends AppCompatActivity {
     TextView moviePlotTv;
     @BindView(R.id.moviePoster)
     ImageView moviePosterIv;
+    Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_detail);
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.actionBar)));
-
-
+        mToolbar = findViewById(R.id.toolbar);
+        mToolbar.setTitle(R.string.movie_details_title);
         ButterKnife.bind(this);
 
+
         Intent i = getIntent();
-        if (i.hasExtra(Intent.EXTRA_TEXT)){
+        if (i.hasExtra(Intent.EXTRA_TEXT)) {
             Movie movieData = (Movie) i.getParcelableExtra(i.EXTRA_TEXT);
 
             Picasso.with(this)
@@ -50,9 +51,5 @@ public class MovieDetailActivity extends AppCompatActivity {
             moviePlotTv.setText(movieData.getmPlot());
         }
     }
-    @Override
-    public void onBackPressed() {
 
-        super.onBackPressed();
-    }
 }
