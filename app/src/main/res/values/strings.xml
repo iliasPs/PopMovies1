@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PopMovies#1</string>
+    <string name="url_problem">Problem building the URL</string>
+    <string name="posterBaseUrl"> http://image.tmdb.org/t/p/</string>
+    <!--<string name="api_key">api_key=37c68ae88a2ddf0ab391b2d52fcccdc0</string>-->
+    <string name="option_popular">Most Popular</string>
+    <string name="option_highest_rated">Highest Rated</string>
+    <string name="no_data">No data available</string>
+    <string name="movie_details_title">Movie Details</string>
+    <string name="title"><u>Title: </u></string>
+    <string name="release"><u>Release Date: </u></string>
+    <string name="average"><u>Average Vote: </u></string>
+    <string name="plot"><u>Plot Synopsis: </u></string>
+
+</resources>
